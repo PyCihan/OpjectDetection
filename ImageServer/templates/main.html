@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html>
+<head>
+    <title>Second Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Image Collection</h1>
+    <br>
+    <div class="container">
+        {% for image in images%}
+        <div class="item">
+            <img src="{{image.image.url}}" class="item">
+            <p>{{image.label}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
